@@ -1,1 +1,64 @@
 
+using System;
+using Collections.Generic;
+using System.Linq
+using System.Text;
+using System.Drawing;
+using System.Windows.Forms;
+
+
+public class Model
+
+{
+
+    public int x;
+    public int y;
+
+    public Model(int x, int y)
+    {
+    
+    }
+
+}
+
+namespace Connect
+{
+    class Board
+{
+    private Graphics gObject;
+    
+   public Board(Graphics g)
+    {
+      gObject = g;
+    }
+    
+    public void setUpCanvas()
+    {
+  
+  Brush lines = new SolidBrush(Color.Blue);
+  
+        gObject.DrawLine(lines, new Point());
+        gObject.DrawLine(lines, new Point());
+        gObject.DrawLine(lines, new Point());
+        gObject.DrawLine(lines, new Point());
+        gObject.DrawLine(lines, new Point());
+        gObject.DrawLine(lines, new Point());
+        gObject.DrawLine(lines, new Point());
+ 
+     }
+
+}
+   
+} 
+
+public Form1()
+{
+
+CountTurn();
+
+}
+
+int count = 0;
+
+void Winner(string symbol)
+{
